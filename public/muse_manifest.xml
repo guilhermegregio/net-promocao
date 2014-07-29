@@ -1,0 +1,70 @@
+<manifest alg="2" build="5" opt="false" iceEnabled="true">
+  <folder name="css">
+    <file name="site_global.css" crc="4162416990"/>
+    <file name="master_a-mestre-c_pia.css" crc="3766986120" ref="nao-atende:conversao-cliente:conversao-nao-cliente"/>
+    <file name="master_a-mestre.css" crc="3943433423" ref="cadastro-final"/>
+    <file name="nao-atende.css" crc="246545734" ref="nao-atende"/>
+    <file name="iefonts_nao-atende.css" crc="3785502018" ref="nao-atende"/>
+    <file name="index.css" crc="30242304" ref="index"/>
+    <file name="iefonts_index.css" crc="4284506088" ref="index"/>
+    <file name="cadastro-final.css" crc="4029780599" ref="cadastro-final"/>
+    <file name="iefonts_cadastro-final.css" crc="3790520012" ref="cadastro-final"/>
+    <file name="conversao-cliente.css" crc="4045749078" ref="conversao-cliente"/>
+    <file name="iefonts_conversao-cliente.css" crc="3785502018" ref="conversao-cliente"/>
+    <file name="conversao-nao-cliente.css" crc="4077976189" ref="conversao-nao-cliente"/>
+    <file name="iefonts_conversao-nao-cliente.css" crc="3785502018" ref="conversao-nao-cliente"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="cadastro-final:conversao-cliente:index:conversao-nao-cliente:nao-atende"/>
+    <file name="museutils.js" crc="4291592202" ref="cadastro-final:conversao-cliente:index:conversao-nao-cliente:nao-atende"/>
+    <file name="jquery.tobrowserwidth.js" crc="3842421675" ref="cadastro-final:conversao-cliente:conversao-nao-cliente:nao-atende"/>
+    <file name="webpro.js" crc="3903299128" ref="cadastro-final:index"/>
+    <file name="form_check.php" crc="379161437" ref="cadastro-final:index"/>
+    <file name="form_throttle.php" crc="4159098415" ref="cadastro-final:index"/>
+    <file name="form-u1042.php" crc="3822852053" ref="cadastro-final"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="291134478" ref="cadastro-final:index"/>
+    <file name="pie.js" crc="3827607177" ref="cadastro-final:index"/>
+    <file name="musewpslideshow.js" crc="138381373" ref="cadastro-final:index"/>
+    <file name="jquery.museoverlay.js" crc="4250894771" ref="cadastro-final:index"/>
+    <file name="touchswipe.js" crc="4156838003" ref="cadastro-final:index"/>
+    <file name="jquery.watch.js" crc="4068933136" ref="cadastro-final:conversao-cliente:index:conversao-nao-cliente:nao-atende"/>
+    <file name="form-u604.php" crc="96553257" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="fundo-pagina-de-cadastro-01.jpg" crc="190118496" ref="cadastro-final:conversao-cliente:conversao-nao-cliente:nao-atende"/>
+    <file name="u1217-grad.png" crc="46082529" ref="cadastro-final"/>
+    <file name="netservicos.png" crc="167223820" ref="cadastro-final:conversao-cliente:index:conversao-nao-cliente:nao-atende"/>
+    <file name="slit shadow 2 sharp.png" crc="4266311304" ref="cadastro-final:conversao-cliente:index:conversao-nao-cliente:nao-atende"/>
+    <file name="botao-enviar.png" crc="4263519212" ref="cadastro-final"/>
+    <file name="u1071-17.png" crc="4199428978" ref="cadastro-final"/>
+    <file name="u1071-17-r.png" crc="4199428978" ref="cadastro-final"/>
+    <file name="u1071-17-m.png" crc="4199428978" ref="cadastro-final"/>
+    <file name="u1071-17-fs.png" crc="15755760" ref="cadastro-final"/>
+    <file name="banner-01_lp.jpg" crc="4071365854" ref="cadastro-final"/>
+    <file name="banner-02_lp.jpg" crc="3878252656" ref="cadastro-final"/>
+    <file name="banner-03_lp.jpg" crc="241865258" ref="cadastro-final"/>
+    <file name="banner-net.jpg" crc="90015799" ref="cadastro-final"/>
+    <file name="banner-net2.jpg" crc="451020476" ref="cadastro-final"/>
+    <file name="fone.jpg" crc="194256862" ref="cadastro-final"/>
+    <file name="banner-hd.jpg" crc="147827392" ref="cadastro-final"/>
+    <file name="fill 2-u1292.png" crc="265821564" ref="cadastro-final"/>
+    <file name="poweredby-evantagens-01.jpg" crc="4089663090" ref="cadastro-final:conversao-cliente:conversao-nao-cliente:nao-atende"/>
+    <file name="banner-cliente.jpg" crc="3867628321" ref="conversao-cliente"/>
+    <file name="u1284-grad.png" crc="4119082631" ref="conversao-cliente"/>
+    <file name="u678-grad.png" crc="3880348080" ref="index"/>
+    <file name="u606-17.png" crc="4275375316" ref="index"/>
+    <file name="u606-17-r.png" crc="4275375316" ref="index"/>
+    <file name="u606-17-m.png" crc="4275375316" ref="index"/>
+    <file name="u606-17-fs.png" crc="4242318299" ref="index"/>
+    <file name="bullet-01.png" crc="3963672811" ref="index"/>
+    <file name="botao-01.jpg" crc="120292064" ref="index"/>
+    <file name="botao-02-01.jpg" crc="380270012" ref="index"/>
+    <file name="banner-nao-cliente.jpg" crc="3964955964" ref="conversao-nao-cliente"/>
+    <file name="banner-nao-atende.jpg" crc="72043877" ref="nao-atende"/>
+  </folder>
+  <file name="cadastro-final.html" crc="105823621" mt="1400641200000" redirect="true"/>
+  <file name="conversao-cliente.html" crc="433678922" mt="1400641200000" redirect="true"/>
+  <file name="index.html" crc="234971622" mt="1400641200000" redirect="true"/>
+  <file name="conversao-nao-cliente.html" crc="422638294" mt="1400641200000" redirect="true"/>
+  <file name="nao-atende.html" crc="4091429813" mt="1400641200000" redirect="true"/>
+</manifest>

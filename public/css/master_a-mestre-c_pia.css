@@ -1,0 +1,80 @@
+#u1282
+{
+	opacity: 0.81;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=81)";
+	filter: alpha(opacity=81);
+	position: relative;
+}
+
+#u1284
+{
+	background: #F2F2F2 url("../images/u1284-grad.png") repeat-x left top;
+	background: -webkit-gradient(linear, center top, center bottom, color-stop(50%, #F3F3F3),to(#F2F2F2));
+	background: -webkit-linear-gradient(top,#F3F3F3 50%,#F2F2F2 );
+	background: -moz-linear-gradient(top,#F3F3F3 50%,#F2F2F2 );
+	background: -ms-linear-gradient(top,#F3F3F3 50%,#F2F2F2 );
+	background: -o-linear-gradient(top,#F3F3F3 50%,#F2F2F2 );
+	background: linear-gradient(to bottom,#F3F3F3 50%,#F2F2F2 );
+	border-color: #000000;
+	position: relative;
+}
+
+#u1285_clip
+{
+	overflow: hidden;
+}
+
+#u1277
+{
+	border-color: #000000;
+	background-color: #0061B2;
+	position: relative;
+}
+
+#u1279-8
+{
+	line-height: 13px;
+	font-size: 11px;
+	color: #1164A3;
+	font-family: lato, sans-serif;
+	font-weight: 400;
+	position: relative;
+}
+
+#u1279-2
+{
+	color: #FFFFFF;
+	font-family: lato, sans-serif;
+	font-weight: 700;
+}
+
+#u1279,#u1279-5
+{
+	color: #FFFFFF;
+}
+
+#u1284_align_to_page,#u1285,#u1277_align_to_page,#u1280
+{
+	position: relative;
+}
+
+#u1278-6
+{
+	line-height: 13px;
+	font-size: 11px;
+	color: #FFFFFF;
+	position: relative;
+}
+
+#u1279-3,#u1278-2
+{
+	font-family: lato, sans-serif;
+	font-weight: 700;
+}
+
+#u1278-4
+{
+	font-family: lato, sans-serif;
+	font-weight: 400;
+}
+
