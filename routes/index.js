@@ -15,7 +15,7 @@ var cepSchema = mongoose.Schema({
 
 var Cep = mongoose.model('Cep', cepSchema);
 
-router.get('/', function () {
+router.get('/', function (req, res) {
 	res.json({status: 'ok'});
 });
 
