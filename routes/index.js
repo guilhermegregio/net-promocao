@@ -15,6 +15,10 @@ var cepSchema = mongoose.Schema({
 
 var Cep = mongoose.model('Cep', cepSchema);
 
+router.get('/', function () {
+	res.json({status: 'ok'});
+});
+
 router.post('/', function (req, res) {
 	var anuncio = new Ad(req.body);
 
