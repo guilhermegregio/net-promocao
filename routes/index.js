@@ -15,35 +15,38 @@ var cepSchema = mongoose.Schema({
 
 var Cep = mongoose.model('Cep', cepSchema);
 
-router.get('/', function (req, res) {
-	res.json({status: 'ok'});
-});
-
 router.post('/', function (req, res) {
-	var anuncio = new Ad(req.body);
+    var anuncio = new Ad(req.body);
 
-	//	anuncio.save();
+    res.cookie('anuncio',anuncio, { maxAge: 900000, httpOnly: true });
+//    res.json(anuncio);
+//		anuncio.save();
 
-	if (anuncio.get('cliente-net') === 'sim') {
-		res.redirect('/conversao-cliente.html');
-	} else {
-		res.redirect('/cadastro-final.html');
-	}
+    if (anuncio.get('cliente-net') === 'sim') {
+        res.redirect('/conversao-cliente.html');
+    } else {
+        res.redirect('/cadastro-final.html');
+    }
 });
 
 router.post('/cadastro', function (req, res) {
-	var anuncio = new Ad(req.body);
+    var anuncio = new Ad(req.body);
 
-	//	anuncio.save();
+    res.json({
+        anuncio: anuncio,
+        cookie: req.cookies.anuncio
+    });
 
-	var atende = Cep.findOne({CEP: Number(anuncio.get('cep'))}, 'CEP CIDADE', function (err, cep) {
-		if (err) res.json(err);
-		if (cep !== null) {
-			res.redirect('/conversao-nao-cliente.html');
-		} else {
-			res.redirect('/nao-atende.html');
-		}
-	});
+//		anuncio.save();
+//
+//	var atende = Cep.findOne({CEP: Number(anuncio.get('cep'))}, 'CEP CIDADE', function (err, cep) {
+//		if (err) res.json(err);
+//		if (cep !== null) {
+//			res.redirect('/conversao-nao-cliente.html');
+//		} else {
+//			res.redirect('/nao-atende.html');
+//		}
+//	});
 
 });
 

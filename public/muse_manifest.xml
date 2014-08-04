@@ -1,18 +1,18 @@
 <manifest alg="2" build="5" opt="false" iceEnabled="true">
   <folder name="css">
-    <file name="site_global.css" crc="4162416990"/>
-    <file name="master_a-mestre-c_pia.css" crc="3766986120" ref="nao-atende:conversao-cliente:conversao-nao-cliente"/>
-    <file name="master_a-mestre.css" crc="3943433423" ref="cadastro-final"/>
-    <file name="nao-atende.css" crc="246545734" ref="nao-atende"/>
-    <file name="iefonts_nao-atende.css" crc="3785502018" ref="nao-atende"/>
-    <file name="index.css" crc="30242304" ref="index"/>
-    <file name="iefonts_index.css" crc="4284506088" ref="index"/>
-    <file name="cadastro-final.css" crc="4029780599" ref="cadastro-final"/>
-    <file name="iefonts_cadastro-final.css" crc="3790520012" ref="cadastro-final"/>
-    <file name="conversao-cliente.css" crc="4045749078" ref="conversao-cliente"/>
-    <file name="iefonts_conversao-cliente.css" crc="3785502018" ref="conversao-cliente"/>
+    <file name="site_global.css" crc="4239559043"/>
+    <file name="master_a-mestre-c_pia.css" crc="4214513874" ref="conversao-nao-cliente:nao-atende:conversao-cliente"/>
+    <file name="master_a-mestre.css" crc="188595875" ref="cadastro-final"/>
     <file name="conversao-nao-cliente.css" crc="4077976189" ref="conversao-nao-cliente"/>
     <file name="iefonts_conversao-nao-cliente.css" crc="3785502018" ref="conversao-nao-cliente"/>
+    <file name="nao-atende.css" crc="246545734" ref="nao-atende"/>
+    <file name="iefonts_nao-atende.css" crc="3785502018" ref="nao-atende"/>
+    <file name="conversao-cliente.css" crc="4045749078" ref="conversao-cliente"/>
+    <file name="iefonts_conversao-cliente.css" crc="3785502018" ref="conversao-cliente"/>
+    <file name="cadastro-final.css" crc="71467869" ref="cadastro-final"/>
+    <file name="iefonts_cadastro-final.css" crc="3790520012" ref="cadastro-final"/>
+    <file name="index.css" crc="110161271" ref="index"/>
+    <file name="iefonts_index.css" crc="4284506088" ref="index"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="cadastro-final:conversao-cliente:index:conversao-nao-cliente:nao-atende"/>
@@ -43,8 +43,7 @@
     <file name="banner-01_lp.jpg" crc="4071365854" ref="cadastro-final"/>
     <file name="banner-02_lp.jpg" crc="3878252656" ref="cadastro-final"/>
     <file name="banner-03_lp.jpg" crc="241865258" ref="cadastro-final"/>
-    <file name="banner-net.jpg" crc="90015799" ref="cadastro-final"/>
-    <file name="banner-net2.jpg" crc="451020476" ref="cadastro-final"/>
+    <file name="banner-net.jpg" crc="451020476" ref="cadastro-final"/>
     <file name="fone.jpg" crc="194256862" ref="cadastro-final"/>
     <file name="banner-hd.jpg" crc="147827392" ref="cadastro-final"/>
     <file name="fill 2-u1292.png" crc="265821564" ref="cadastro-final"/>
@@ -62,9 +61,9 @@
     <file name="banner-nao-cliente.jpg" crc="3964955964" ref="conversao-nao-cliente"/>
     <file name="banner-nao-atende.jpg" crc="72043877" ref="nao-atende"/>
   </folder>
-  <file name="cadastro-final.html" crc="105823621" mt="1400641200000" redirect="true"/>
-  <file name="conversao-cliente.html" crc="433678922" mt="1400641200000" redirect="true"/>
-  <file name="index.html" crc="234971622" mt="1400641200000" redirect="true"/>
-  <file name="conversao-nao-cliente.html" crc="422638294" mt="1400641200000" redirect="true"/>
-  <file name="nao-atende.html" crc="4091429813" mt="1400641200000" redirect="true"/>
+  <file name="cadastro-final.html" crc="4022674224" mt="1400641200000" redirect="true"/>
+  <file name="conversao-cliente.html" crc="528742578" mt="1400641200000" redirect="true"/>
+  <file name="index.html" crc="353900893" mt="1400641200000" redirect="true"/>
+  <file name="conversao-nao-cliente.html" crc="4084965303" mt="1400641200000" redirect="true"/>
+  <file name="nao-atende.html" crc="71858594" mt="1400641200000" redirect="true"/>
 </manifest>

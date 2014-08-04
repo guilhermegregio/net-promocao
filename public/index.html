@@ -51,12 +51,12 @@ var __adobewebfontsappname__ = "muse";
     <div class="clearfix colelem" id="u603-4"><!-- content -->
      <p>DIGITE SEU CEP E VERIFIQUE A DISPONIBILIDADE TÉCNICA EM SEU ENDEREÇO!</p>
     </div>
-    <form class="form-grp clearfix colelem" id="widgetu604" method="post" enctype="multipart/form-data" action="/net-promocao/api/"><!-- none box -->
+    <form class="form-grp clearfix colelem" id="widgetu604" method="post" action="api/"><!-- none box -->
      <div class="fld-grp clearfix grpelem" id="widgetu633" data-required="true"><!-- none box -->
       <label class="fld-label actAsDiv clearfix grpelem" id="u635-4" for="widgetu633_input"><!-- content -->
        <span class="actAsPara">Nome*</span>
       </label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u634-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu633_input" name="custom_U633" tabindex="1" /><label class="wrapped-input fld-prompt" id="widgetu633_prompt" for="widgetu633_input"><span class="actAsPara">Insira seu nome</span></label></span>
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u634-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu633_input" name="nome" tabindex="1" /><label class="wrapped-input fld-prompt" id="widgetu633_prompt" for="widgetu633_input"><span class="actAsPara">Insira seu nome</span></label></span>
      </div>
      <div class="fld-grp clearfix grpelem" id="widgetu608" data-required="true"><!-- none box -->
       <label class="fld-label actAsDiv clearfix grpelem" id="u611-4" for="widgetu608_input"><!-- content -->
@@ -78,19 +78,19 @@ var __adobewebfontsappname__ = "muse";
       <label class="fld-label actAsDiv clearfix grpelem" id="u673-4" for="widgetu671_input"><!-- content -->
        <span class="actAsPara">Telefone*</span>
       </label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u674-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu671_input" name="custom_U671" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu671_prompt" for="widgetu671_input"><span class="actAsPara">Insira seu&nbsp; número de telefone</span></label></span>
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u674-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu671_input" name="telefone" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu671_prompt" for="widgetu671_input"><span class="actAsPara">Insira seu&nbsp; número de telefone</span></label></span>
      </div><div class="clearfix colelem" id="pu719-4"><!-- group -->
      <div class="clearfix grpelem" id="u719-4"><!-- content -->
       <p><label for="radio">Já sou cliente NET</label></p>
      </div>
      <div class="clip_frame grpelem" id="u713"><!-- image -->
-      <input class="radio" id="radio" name="e_cliente" type="radio" />
+      <input class="radio" id="radio" name="cliente-net" type="radio" value="sim" />
      </div>
      <div class="clearfix grpelem" id="u724-4"><!-- content -->
       <p><label for="radio">Quero ser cliente NET</label></p>
      </div>
      <div class="clip_frame grpelem" id="u725"><!-- image -->
-      <input class="radio" id="radio" type="radio" name="e_cliente" checked/>
+      <input class="radio" id="radio" type="radio" name="cliente-net" checked value="nao" />
      </div>
     </div>
     </form>
