@@ -27,9 +27,9 @@ router.post('/', function (req, res) {
 		anuncio.save();
 
 		if (anuncio.get('cliente-net') === 'sim') {
-			res.redirect('/net-promocao/conversao-cliente.html');
+			res.redirect('/conversao-cliente.html');
 		} else {
-			res.redirect('/net-promocao/cadastro-final.html');
+			res.redirect('/cadastro-final.html');
 		}
 	});
 });
@@ -39,9 +39,9 @@ router.post('/cadastro', function (req, res) {
 
 	Ad.findOneAndUpdate({_id: req.cookies.anuncio._id}, req.body, function (err, place) {
 		if (anuncio.get('cepAtende')) {
-			res.redirect('/net-promocao/conversao-nao-cliente.html');
+			res.redirect('/conversao-nao-cliente.html');
 		} else {
-			res.redirect('/net-promocao/nao-atende.html');
+			res.redirect('/nao-atende.html');
 		}
 	});
 
