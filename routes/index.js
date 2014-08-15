@@ -1,19 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
-var ObjectId = mongoose.Types.ObjectId;
-
-mongoose.connect('mongodb://localhost/netPromocao');
-
-var adSchema = mongoose.Schema({
-}, { strict: false });
-
-var Ad = mongoose.model('Ad', adSchema);
-
-var cepSchema = mongoose.Schema({
-}, { strict: false });
-
-var Cep = mongoose.model('Cep', cepSchema);
+var Cep = require('../models/anuncios').Cep;
+var Ad = require('../models/anuncios').Ad;
 
 router.post('/', function (req, res) {
 	var anuncio = new Ad(req.body);
@@ -21,7 +9,8 @@ router.post('/', function (req, res) {
 	Cep.findOne({CEP: Number(anuncio.get('cep').replace('-', ''))}, function (err, cep) {
 
 		anuncio.set('cepAtende', cep !== null);
-
+		anuncio.set('cidade', cep.get('CIDADE'));
+		anuncio.set('estado', cep.get('UF'));
 		res.cookie('anuncio', anuncio, { maxAge: 900000, httpOnly: true });
 
 		anuncio.save();
@@ -29,7 +18,7 @@ router.post('/', function (req, res) {
 		if (anuncio.get('cliente-net') === 'sim') {
 			res.redirect('/conversao-cliente.html');
 		} else {
-			res.redirect('/cadastro-final.html');
+			res.redirect('/cadastro-final');
 		}
 	});
 });
