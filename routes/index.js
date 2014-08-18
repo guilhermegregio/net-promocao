@@ -9,8 +9,14 @@ router.post('/', function (req, res) {
 	Cep.findOne({CEP: Number(anuncio.get('cep').replace('-', ''))}, function (err, cep) {
 
 		anuncio.set('cepAtende', cep !== null);
-		anuncio.set('cidade', cep.get('CIDADE'));
-		anuncio.set('estado', cep.get('UF'));
+		anuncio.set('cidade', '');
+		anuncio.set('estado', '');
+
+		if(anuncio.get('cepAtende')) {
+			anuncio.set('cidade', cep.get('CIDADE'));
+			anuncio.set('estado', cep.get('UF'));
+		}
+
 		res.cookie('anuncio', anuncio, { maxAge: 900000, httpOnly: true });
 
 		anuncio.save();
