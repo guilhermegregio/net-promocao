@@ -70,7 +70,7 @@ var __adobewebfontsappname__ = "muse";
        </label>
        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1052-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1049_input" name="telOpcional" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu1049_prompt" for="widgetu1049_input"><span class="actAsPara">Insira seu número de telefone</span></label></span>
       </div>
-      <div class="fld-grp clearfix grpelem" id="widgetu1087" data-required="true"><!-- none box -->
+      <div class="fld-grp clearfix grpelem" id="widgetu1087" data-required="true" ><!-- none box -->
        <label class="fld-label actAsDiv clearfix grpelem" id="u1090-4" for="widgetu1087_input"><!-- content -->
         <span class="actAsPara">Endereço*</span>
        </label>
@@ -86,7 +86,7 @@ var __adobewebfontsappname__ = "muse";
        <p>Formulário recebido.</p>
       </div>
       <input class="submit-btn NoWrap grpelem" id="u1071-17" type="submit" value="" tabindex="9"/><!-- state-based BG images -->
-      <div class="fld-grp clearfix grpelem" id="widgetu1077" data-required="true"><!-- none box -->
+      <div class="fld-grp clearfix grpelem" id="widgetu1077" data-required="true" data-type="email"><!-- none box -->
        <label class="fld-label actAsDiv clearfix grpelem" id="u1078-4" for="widgetu1077_input"><!-- content -->
         <span class="actAsPara">E&#45;mail*</span>
        </label>
@@ -235,11 +235,20 @@ var __adobewebfontsappname__ = "muse";
   <script type="text/javascript" src="http://e-vantagens.com/js/jquery.maskedinput-1.3.js"></script>
   <script type="text/javascript">
    $(document).ready(function() { try {
-	  $(function() {
-  		$("#widgetu1049_input").mask("(99) 9999?9-9999");
+		$("#widgetu1042").submit(function(){
+		var not = ["2222-22222","3333-33333","4444-44444","5555-55555","6666-66666","7777-77777","8888-88888" ,"9999-99999","1234-56789","9876-54321","2222-2222_","3333_3333_","4444-4444_","5555-5555_","6666-6666_","7777-7777_","8888-8888_","9999-9999_","2222-2222","3333_3333","4444-4444","5555-5555","6666-6666","7777-7777","8888-8888","9999-9999"];
+	    var tel=widgetu1049_input.value.substring(5,15);
+		var valido;
+		$.each(not,function(index){if(tel==not[index]){valido= false;}});
+		if(!widgetu1049_input.value||!widgetu1077_input.value||!widgetu1087_input.value||!widgetu1044_input.value||!widgetu1082_input.value||!widgetu1066_input.value||!widgetu1072_input.value){alert("Preecha os campos obrigatórios");return false;}
+		if(widgetu1049_input.value.substring(1,3)<11){alert("Digite um Telefone válido");return false;}
+		if(widgetu1049_input.value.substring(5,6)<2){alert("Telefone Inválido");return false;}
+		if(valido==false){alert("Telefone inválido");return false;}
+		else{return true;}
+		});
+  		$("#widgetu1049_input").mask("(99) 9999-9999?9");
 		$("#widgetu1044_input").mask("9?9999999",{placeholder:""});
 		$("#widgetu1072_input").mask("aa");
-	   });
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 $('.browser_width').toBrowserWidth();/* browser width elements */
 Muse.Utils.prepHyperlinks(true);/* body */

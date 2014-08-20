@@ -5,7 +5,7 @@
 
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="generator" content="7.3.5.244"/>
-  <title>LIGHT BOX</title>
+  <title>NET</title>
   <link href="http://macmagazine.com.br/wp-content/uploads/2013/03/20-net_icon-300x300.png"  rel="shortcut icon">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?4239559043"/>
@@ -51,12 +51,12 @@ var __adobewebfontsappname__ = "muse";
     <div class="clearfix colelem" id="u603-4"><!-- content -->
      <p>DIGITE SEU CEP E VERIFIQUE A DISPONIBILIDADE TÉCNICA EM SEU ENDEREÇO!</p>
     </div>
-    <form class="form-grp clearfix colelem" id="widgetu604" method="post" action="api/"><!-- none box -->
+    <form class="form-grp clearfix colelem" id="widgetu604" method="post" action="api/" onSubmit="return validar();"><!-- none box -->
      <div class="fld-grp clearfix grpelem" id="widgetu633" data-required="true"><!-- none box -->
       <label class="fld-label actAsDiv clearfix grpelem" id="u635-4" for="widgetu633_input"><!-- content -->
        <span class="actAsPara">Nome*</span>
       </label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u634-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu633_input" name="nome" tabindex="1" /><label class="wrapped-input fld-prompt" id="widgetu633_prompt" for="widgetu633_input"><span class="actAsPara">Insira seu nome</span></label></span>
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u634-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu633_input" name="nome" tabindex="1" /><label class="wrapped-input fld-prompt" id="widgetu633_prompt" for="widgetu633_input"><span class="actAsPara">Insira seu nome e sobrenome</span></label></span>
      </div>
      <div class="fld-grp clearfix grpelem" id="widgetu608" data-required="true"><!-- none box -->
       <label class="fld-label actAsDiv clearfix grpelem" id="u611-4" for="widgetu608_input"><!-- content -->
@@ -78,7 +78,7 @@ var __adobewebfontsappname__ = "muse";
       <label class="fld-label actAsDiv clearfix grpelem" id="u673-4" for="widgetu671_input"><!-- content -->
        <span class="actAsPara">Telefone*</span>
       </label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u674-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu671_input" name="telefone" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu671_prompt" for="widgetu671_input"><span class="actAsPara">Insira seu&nbsp; número de telefone</span></label></span>
+      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u674-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu671_input" name="telefone" tabindex="3"  /><label class="wrapped-input fld-prompt" id="widgetu671_prompt" for="widgetu671_input" ><span class="actAsPara">Insira seu&nbsp; número de telefone</span></label></span>
      </div><div class="clearfix colelem" id="pu719-4"><!-- group -->
      <div class="clearfix grpelem" id="u719-4"><!-- content -->
       <p><label for="radio">Já sou cliente NET</label></p>
@@ -90,7 +90,7 @@ var __adobewebfontsappname__ = "muse";
       <p><label for="radio">Quero ser cliente NET</label></p>
      </div>
      <div class="clip_frame grpelem" id="u725"><!-- image -->
-      <input class="radio" id="radio" type="radio" name="cliente-net" checked value="nao" />
+      <input class="radio" id="radio" type="radio" name="cliente-net" value="nao" checked/>
      </div>
     </div>
     </form>
@@ -135,12 +135,25 @@ var __adobewebfontsappname__ = "muse";
   <script src="scripts/jquery.watch.js?4068933136" type="text/javascript"></script>
   <!-- Other scripts -->
   <script type="text/javascript" src="http://e-vantagens.com/js/jquery.maskedinput-1.3.js"></script>
+  
   <script type="text/javascript">
    $(document).ready(function() { try {
-	   $(function() {
+   
+   $("#widgetu604").submit(function(){
+    var not = ["2222-22222","3333-33333","4444-44444","5555-55555","6666-66666","7777-77777","8888-88888" ,"9999-99999","1234-56789","9876-54321","2222-2222_","3333-3333_","4444-4444_","5555-5555_","6666-6666_","7777-7777_","8888-8888_","9999-9999_","2222-2222","3333-3333","4444-4444","5555-5555","6666-6666","7777-7777","8888-8888","9999-9999"];
+	var tel=widgetu671_input.value.substring(5,15);
+	var valido;
+	$.each(not,function(index){if(tel==not[index]){valido= false;}});
+   if(!widgetu608_input.value||!widgetu671_input.value||!widgetu633_input.value){alert("Preencha os campos obrigatórios");return false;}
+   if(!(regex = /[a-z]*\s[a-z]*/gi.exec(widgetu633_input.value))){alert("Campo Nome Inválido\n Digite seu Nome e Sobrenome");return false;}
+   if(!(regex = /\([1-9]{2}\)\ [0-9]{4}\-[0-9]{4}?(.)|\([1-9]{2}\)\ [0-9]{4}\-[0-9]{4}/.exec(widgetu671_input.value))){alert("Telefone inválido");return false;}
+   if(widgetu671_input.value.substring(1,3)<11){alert("Digite um Telefone válido");return false;}
+   if(widgetu671_input.value.substring(5,6)<2){alert("Telefone Inválido");return false;}
+   if(valido==false){alert("Telefone inválido");return false;}
+   else{valido= true;}
+   });
   		$("#widgetu608_input").mask("99999-999");
 		$('#widgetu671_input').mask("(99) 9999-9999?9");
-	   });
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.initWidget('#widgetu604', function(elem) { new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:false}); });/* #widgetu604 */
